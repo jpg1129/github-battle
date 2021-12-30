@@ -1,0 +1,29 @@
+The Component Lifecycle 
+
+You can break down the lifecycle into three parts.
+1.) When the component gets added to the DOM (mounting)
+2.) When the component updates its state or receives new data via props (updating)
+3.) When the component gets removed from the DOM (unmounting).
+
+Initial State (constructor)
+
+DOM Node (render lifecyle method to decide )
+
+ Though you're not exactly rendering a DOM node yourself, 
+ you'll use the render lifecycle method in order to describe 
+ (using JSX) the type of DOM node you want to render.
+
+  It's important that render is a pure function. 
+  It shouldn't do anything other than examine the component's state and p
+  rops and return a description of the UI
+
+Ajax Requests (componentDidMount)
+
+Updating 
+  Re-render the UI with the updated state or props  (React handles this)
+  Re-fetching data (ComponentDidUpdate)
+  Re-setting listener (ComponentDidUpdate)
+
+unmounting
+  cleanup, remove listeners, etc.. 
+
