@@ -1,22 +1,12 @@
-class first {
-  constructor() {}
-  foo() {
-    return 'hello';
-  }
-  passedDownFunc() {
-    return this.foo();
-  }
+function Publicaiton(title, author, pbuDate) {
+  var publicAPI = {
+    print() {
+      console.log(`
+			Title: ${title}
+			By: ${author}
+			${pubDate}
+		`);
+    },
+  };
+  return publicAPI;
 }
-
-class second {
-  constructor(firstClass) {
-    this.firstClass = firstClass;
-  }
-  test() {
-    let fire = this.firstClass.foo();
-    console.log(fire);
-  }
-}
-let MyFirst = new first();
-let MySecond = new second(MyFirst);
-MySecond.test();
